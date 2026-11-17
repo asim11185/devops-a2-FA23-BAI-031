@@ -34,8 +34,8 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.malikasim1122 }}
+          password: ${{ secrets.docker login -u malikasim1122 }}
 
       - name: Build and push image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -43,4 +43,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-a2:latest
+          tags: ${{ secrets.malikasim1122 }}/devops-a2:latest
